@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+NOTE_ON = 0x90
+NOTE_OFF = 0x80
+
+VELOCITY_RANGE = range(1,127)
+VELOCITY_MIN = 0
+VELOCITY_MAX = 127
