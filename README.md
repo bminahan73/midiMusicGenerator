@@ -2,7 +2,7 @@
 A MIDI Music generator based on python-rtmidi implementaton.
 
 ### requirements
-You will need python3 for this. also preferred is virtualev and latest version of pip installed.
+You will need python3 for this. also preferred is virtualenv and latest version of pip installed.
 
 ### setup
 
