@@ -30,12 +30,12 @@ python listmidiports.py
 5. set the `MIDI_PORT` environment variable to whatever device you wish to send output to:
 
 ```shell
-export MIDI_PORT='name of midi port device form step 4'
+export MIDI_PORT='name of midi port device from step 4'
 ```
 
 this step is not strictly necessary. If the port is left empty, the output will be sent omni (to all exposed midi devices taking output).
 
-6. run the test to ensure everything is working. your MID output device should be sent a scale as well as some random notes:
+6. run the test to ensure everything is working. your MIDI output device should be sent a scale as well as some random notes:
 
 ```shell
 cd src
