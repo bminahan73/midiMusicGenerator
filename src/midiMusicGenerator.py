@@ -32,6 +32,11 @@ def list_available_midi_ports(con):
     available_ports = con.get_ports()
     print('available ports are: {0}'.format(available_ports))
 
+def play_single_note(con, pitch, note_type=notetypes.QUARTER, velocity=65):
+    con.send_message( [ events.NOTE_ON, pitch, velocity ] )
+    time.sleep(note_type)
+    con.send_message( [ events.NOTE_OFF, pitch, velocity ] )
+
 
 def play_notes(con, num_notes=10, velocities=events.VELOCITY_RANGE, pitches=pitches.MIDI_NOTE_RANGE, note_types=notetypes.EASTERN_NOTE_TYPES):
     notes = []
@@ -39,17 +44,9 @@ def play_notes(con, num_notes=10, velocities=events.VELOCITY_RANGE, pitches=pitc
         velocity = random.choice(velocities)
         pitch = random.choice(pitches)
         note_type = random.choice(note_types)
-        notes.append( { 'pitch': pitch, 'velocity': velocity, 'length': note_type } )
+        notes.append( { 'pitch': pitch, 'note_type': note_type, 'velocity': velocity,} )
     for note in notes:
-        con.send_message( [ events.NOTE_ON, note['pitch'], note['velocity'] ] )
-        time.sleep(note['length'])
-        con.send_message( [ events.NOTE_OFF, note['pitch'], note['velocity'] ] )
-
-
-def play_single_note(con, pitch, note_type=notetypes.QUARTER, velocity=65):
-    con.send_message( [ events.NOTE_ON, pitch, velocity ] )
-    time.sleep(note_type)
-    con.send_message( [ events.NOTE_OFF, pitch, velocity ] )
+        play_single_note(con, pitch=note['pitch'], note_type=note['note_type'], velocity=note['velocity'])
 
 
 def play_scale(con, scale, note_type=notetypes.QUARTER, velocity=65):
