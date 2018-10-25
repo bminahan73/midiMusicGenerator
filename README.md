@@ -24,7 +24,7 @@ pip install -r /path/to/repo/requirements.txt
 
 ```shell
 cd src
-./listmidiports.py
+python listmidiports.py
 ```
 
 5. set the `MIDI_PORT` environment variable to whatever device you wish to send output to:
@@ -39,7 +39,7 @@ this step is not strictly necessary. If the port is left empty, the output will 
 
 ```shell
 cd src
-./test.py
+python test.py
 ```
 
 ### contributing
