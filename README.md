@@ -7,10 +7,11 @@ You will need python3 for this. also preferred is virtualev and latest version o
 ### setup
 
 1. clone this repo
-2. create a python virtual env for python3:
+2. create a python virtual env for python3, and activate it:
 
 ```shell
 virtualenv -p $(which python3) <repo location>
+source <repo location>/bin/activate
 ```
 
 3. install all of the requirements:
