@@ -19,8 +19,8 @@ def open_midi_connection():
         finally:
             con.open_port(port)
     else:
-        con.open_virtual_port('python virtual MIDI port')
         print('No availible midi output devices detected, so we will open a virtual device.')
+        con.open_virtual_port('python virtual MIDI port')
     return con
 
 
