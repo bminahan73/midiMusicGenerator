@@ -53,17 +53,4 @@ EB_HARMONIC_MINOR = [63, 65, 66, 68, 70, 71, 74, 75]
 GB_HARMONIC_MINOR = [66, 68, 69, 71, 73, 74, 77, 78]
 AB_HARMONIC_MINOR = [68, 70, 71, 73, 75, 76, 79, 80]
 BB_HARMONIC_MINOR = [70, 72, 73, 75, 77, 78, 81, 82]
-
-
-def shift_notes_octave(notes, shift_amount):
-    shifted_notes = [];
-    for note in notes:
-        shifted_notes.append(note + (shift_amount * 12))
-    return shifted_notes
-
-
-def shift_notes(notes, shift_amount):
-    shifted_notes = [];
-    for note in notes:
-        shifted_notes.append(note + shift_amount)
-    return shifted_notes
+CHROMATIC = range(60,72)

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-EASTERN_NOTE_TYPES = [
+#note lengths are in seconds, and based on 120 BPM (MIDI standard)
+# TODO: implement triplets, duplets and quarduplets. Skipping for now because math is hard:
+# triplets since they are real irrational numbers will cause beat to slowly become OOS. So we would need to account for that somehow...
+WESTERN_NOTE_TYPES = [
     0.0625,
     0.125,
     0.1875,
