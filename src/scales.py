@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import pitches
-
 C_MAJOR = [60, 62, 64, 65, 67, 69, 71, 72]
 CS_MAJOR = [61, 63, 65, 66, 68, 70, 72, 73]
 D_MAJOR = [62, 64, 66, 67, 69, 71, 73, 74]
