@@ -52,12 +52,14 @@ def play_single_note(con, pitch, note_type=notetypes.QUARTER, velocity=velocitie
     time.sleep(note_type)
     con.send_message( [ events.NOTE_OFF, pitch, velocity ] )
 
+
 def play_chord(con, chord, note_type, velocity=velocities.VELOCITY_MF):
     for note in chord:
         con.send_message( [ events.NOTE_ON, note, velocity ] )
     time.sleep(note_type)
     for note in chord:
         con.send_message( [ events.NOTE_OFF, note, velocity ] )
+
 
 def get_chord_notes(root_note, chord):
     chord_from_root = []
